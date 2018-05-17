@@ -1,0 +1,59 @@
+<!--pages/newAddress/newAddress.wxml-->
+<view class='content'>
+  <view class='start'>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class='item'>
+      <view class='itemTitle'>联系人</view>
+      <view class='mas'>
+        <input type='text' placeholder='请输入联系人'placeholder-class="holder" name="userName" value='{{address.userName}}'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='itemTitle'>性别</view>
+      <view class='mas'>
+        <radio-group class="radin-group" bindchange="radioChange" name="sex">
+          <radio checked="{{sex}}" value='先生'>先生</radio>
+          <radio checked="{{!sex}}" value='女士'>女士</radio>
+        </radio-group>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='itemTitle'>手机号码</view>
+      <view class='mas'>
+        <input type="text" placeholder="鲜蜂侠联系您的电话" placeholder-class="holder" name="phone" value='{{address.phone}}'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='itemTitle'>所在城市</view>
+      <view class='mas'>
+        <picker mode="region" bindchange="bindPickerChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker">
+              {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='itemTitle'>收货地址</view>
+      <view class='mas'>
+        <input type="text" placeholder="请输入您的小区、大厦或学校" placeholder-class="holder" name="address" value='{{address.address}}'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='itemTitle'>门牌号</view>
+      <view class='mas'>
+        <input type="text" placeholder="请输入楼号门牌号详细信息" placeholder-class="holder" name="num" value='{{address.num}}'></input>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='mas'>
+        是否设为默认地址
+      </view>
+      <switch name="default" checked='{{switchChecked}}' disabled="{{switchChecked}}" ></switch>
+    </view>
+    <view class='item'>
+      <button class='btn' type='success' form-type="submit">保存</button>
+    </view>
+  </form>
+  </view>
+</view>

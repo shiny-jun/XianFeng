@@ -1,0 +1,16 @@
+<!--pages/supermarket/rxb.wxml-->
+<scroll-view class='scroll-view_H' style='height: 500px;' scroll-y>
+<view wx:for="{{goods}}" wx:key="unique">
+  <view class='item'>
+    <view class='icon'><image src='{{item.cover_image}}' style='width:70px;height:70px;'></image></view>
+    <view class='info'>
+      <view class='name'>{{item.title}}</view>
+      <view class='priceInfo'>
+        <view class='price'>￥{{item.price}}</view>
+        <view class='count' id='{{item.id}}' bindtap='addGoods'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class='hr'></view>
+</view>
+</scroll-view>

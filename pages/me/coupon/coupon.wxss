@@ -1,0 +1,111 @@
+/* pages/me/coupon/coupon.wxss */
+.menu{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+}
+.menu view{
+  margin: 0 auto;
+  font-size: 15px;  
+  text-align: center;
+  height: 45px;
+  line-height: 45px;
+  flex: 1;
+}
+.select{
+  color: #000;
+  border-bottom: 5px solid #FFD600;
+}
+.default{
+  color: #ccc;
+  border-bottom: 5px solid #ccc;
+}
+.item{
+  border: 1px solid #FFD600;
+  width: 96%;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.item1{
+  border: 1px solid #ccc;
+  width: 96%;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.priceInfo{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  height: 60px;
+}
+.price{
+  width: 20%;
+  line-height: 60px;
+  color: #FFD600;
+}
+.price1{
+  width: 20%;
+  line-height: 60px;
+  color: #cccccc;
+}
+.type{
+  width: 80%;
+  font-size: 15px;
+  color: #FFD600;
+  display: flex;
+  flex-direction: row;
+}
+.type1{
+  width: 80%;
+  font-size: 15px;
+  color: #ccc;
+  display: flex;
+  flex-direction: row;
+}
+.type view{
+  width: 100%;
+  margin-top: 5px;
+}
+.type1 view{
+  width: 100%;
+  margin-top: 5px;
+}
+.rmb{
+  font-size: 13px;
+}
+.count{
+  font-size: 20px;
+}
+.desc{
+  font-size: 12px;
+  background-color: #FFD600;
+  height: 30px;
+  color: #fff;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.desc1{
+  font-size: 12px;
+  background-color: #ccc;
+  height: 30px;
+  color: #fff;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.left{
+  width: 60%;
+  text-align: left;
+  margin-left: 10px;
+}
+.right{
+  width: 40%;
+  text-align: right;
+  margin-right: 10px;
+}

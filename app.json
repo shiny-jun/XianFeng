@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/me/order/order",
+    "pages/shoppingcart/shoppingcart",
+    "pages/shoppingcart/getOrder/getOrder",
+    "pages/supermarket/supermarket",
+    "pages/me/me",
+    "pages/newAddress/newAddress",
+    "pages/address/address",
+    "pages/addressChoose/addressChoose",
+    "pages/me/coupon/coupon",
+    "pages/supermarket/rxb",
+    "pages/supermarket/tttj"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#FFD600",
+    "navigationBarTitleText": "鲜蜂侠",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFBF8",
+    "borderStyle": "white",
+    "selectedColor": "#FFD600",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/icon/home-0.png",
+      "selectedIconPath": "images/icon/home-1.png"
+    },{
+      "pagePath": "pages/supermarket/supermarket",
+      "text": "闪送超市",
+      "iconPath": "images/icon/shop-0.png",
+      "selectedIconPath": "images/icon/shop-1.png"
+    },
+    {
+      "pagePath": "pages/shoppingcart/shoppingcart",
+      "text": "购物车",
+      "iconPath": "images/icon/cart-0.png",
+      "selectedIconPath": "images/icon/cart-1.png"
+    },
+    {
+      "pagePath": "pages/me/me",
+      "text": "我的",
+      "iconPath": "images/icon/me-0.png",
+      "selectedIconPath": "images/icon/me-1.png"
+    }]
+  }
+}

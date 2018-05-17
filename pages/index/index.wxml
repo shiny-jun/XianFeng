@@ -1,0 +1,65 @@
+<!--pages/index/index.wxml-->
+<view class='haibao'>
+  <swiper indicator-dots='{{indicatorDots}}' autoplay='{{autoplay}}' interval='{{interval}}' duration='{{duration}}'>
+    <block wx:for="{{imgUrls}}" wx:key="unique">
+      <swiper-item>
+        <image src='{{item.img}}' class='silde-image' bindtap='selectNav2' id='{{item.id}}'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='nav'>
+  <view class='nav-item' wx:for="{{navs}}" wx:key="unique">
+    <view>
+      <image src='{{item.img}}' style='width:43px;height:43px;'></image>
+    </view>
+    <view>{{item.name}}</view>
+  </view>
+</view>
+<view class='hr'></view>
+<view class='bld'>
+  <image src='../../images/index/2-bld.jpg' style='width:200px;height:49px;'></image>
+</view>
+<view>
+  <image src='../../images/index/2-rexiao.jpg' style='width:50%;height:60px;' bindtap='selectNav2' id='0'></image>
+  <image src='../../images/index/2-tejia.jpg' style='width:50%;height:60px;' bindtap='selectNav2' id='1'></image>
+</view>
+<view class='nav'>
+  <view class='nav-item' wx:for="{{navs2}}" wx:key="unique" bindtap='selectNav2' id='{{item.id}}'>
+    <view>
+      <image src='{{item.img}}' style='width:40px;height:35px;'></image>
+    </view>
+    <view class='title'>{{item.name}}</view>
+  </view>
+  <!-- <view class='nav-item' bindtap='selectmore'>
+    <view>
+      <image src='../../images/index/2-gengduo.jpg' style='width:40px;height:35px;'></image>
+    </view>
+    <view class='title'>更多</view>
+  </view> -->
+</view>
+<!-- <view class='pic'>
+  <image wx:for="{{pic}}" wx:key="unique" src='{{item.img}}' style='width:49%;height:80px;' bindtap='selectNav2' id='{{item.id}}'></image>
+</view> -->
+<view class='item'>
+  <view class='status'>
+    <view class='type'>
+      <view>热销榜</view>
+    </view>
+    <view class='more' bindtap='selectmore'>更多 ></view>
+  </view>
+  <view class='orders'>
+    <scroll-view class="scroll-view_H" scroll-x style="width: 100%">
+      <view class='order scroll-view-item_H' wx:for="{{goods}}" wx:for-item="order" wx:key="unique">
+        <view>
+          <image src='{{order.cover_image}}' style='width:59px;height:59px;'></image>
+        </view>
+        <view class='orderName'>{{order.title}}</view>
+        <view class='priceInfo'>
+          <view class='price'>￥{{order.price}}</view>
+          <view class='count' id='{{order.id}}' bindtap='addGoods'>+</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,48 @@
+<!--pages/me/order/order.wxml-->
+<view class='content'>
+  <view class='menu'>
+    <view class="{{currentTab==0?'select':'default'}}" data-current='0' bindtap='switchNav'>全部</view>
+    <view class="{{currentTab==1?'select':'default'}}" data-current='1' bindtap='switchNav'>待付款</view>
+    <view class="{{currentTab==2?'select':'default'}}" data-current='2' bindtap='switchNav'>待发货</view>
+    <view class="{{currentTab==3?'select':'default'}}" data-current='3' bindtap='switchNav'>待收货</view>
+    <view class="{{currentTab==4?'select':'default'}}" data-current='4' bindtap='switchNav'>待评价</view>
+  </view>
+  <block wx:for="{{order}}" wx:key="unique">
+    <view class='hr'></view>
+    <view class='order'>
+      <view class='head'>
+        <view class='orderNum'>订单编号:{{item.serial_number}}</view>
+        <view class='trash'>
+          <image src='../../../images/icon/trash.png' style='width:26px;height:29px;'></image>
+        </view>
+      </view>
+      <view class='line'></view>
+      <view class='mes'>
+        <view class='img'>
+          <block wx:for="{{item.goods}}" wx:key="unique">
+            <image src='{{item.cover_image}}' style='width:80px; height:80px;'></image>
+          </block>
+        </view>
+        <view class='mes2'>
+          <view class='state'>
+            <text wx:if="{{item.status==1}}">待付款</text>
+            <text wx:if="{{item.status==2}}">待发货</text>
+            <text wx:if="{{item.status==3}}">待收货</text>
+            <text wx:if="{{item.status==4}}">待评价</text>
+          </view>
+          <view class='sum'>￥{{item.total_cost}}</view>
+        </view>
+      </view>
+      <view class='line'></view>
+      <view class='btn'>
+        <!-- <view class='del'>取消订单</view>
+        <view class='pay'>付款</view>
+        <view class='comment'>评价</view> -->
+        <button class='del' size='mini' plain="true" wx:if="{{item.status==1}}">取消订单</button>
+        <button class='pay' size='mini' plain="true" wx:if="{{item.status==1}}">付款</button>
+        <button class='sure' size='mini' plain="true" wx:if="{{item.status==3}}">确认收货</button>
+        <button class='comment' size='mini' plain="true" wx:if="{{item.status==4}}">评论</button>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,79 @@
+/* pages/me/me.wxss */
+page {
+  background-color: #e8e8ed;
+  min-height:100%;
+}
+.content{
+  background-color: #e8e8ed;
+  height: 100%;
+  width: 100%;
+}
+.bg{
+  width: 100%;
+  height: 150px;
+  background-color: #FFD600;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 150px;
+}
+.headIcon{
+  margin: 20px;
+}
+.headIcon image{
+  border-radius: 50px;
+}
+.login{
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-right: 40px;
+}
+.uaerName{
+
+}
+.right{
+  position: absolute;
+  right: 10px;
+}
+.hr{
+  width: 100%;
+  height: 15px;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  align-items: center;
+  line-height: 50px;  
+}
+.img{
+  margin-left: 10px;
+  padding-top: 10px;
+  width:7%;
+}
+.name{
+  padding-left:10px;
+  font-size: 15px;
+  width:43%;
+}
+.detail{
+  padding-top: 5px;  
+  position: absolute;
+  right: 10px;
+  height: 50px;
+  line-height: 50px;
+}
+.line{
+  border-bottom: 1px solid #ccc;
+  opacity: 0.2;
+}
+.count{
+  font-size: 15px;
+  color: #ff0000;
+  width:43%;
+  text-align:right;
+  padding-right: 40px;
+}

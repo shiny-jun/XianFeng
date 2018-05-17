@@ -1,0 +1,39 @@
+/* pages/newAddress/newAddress.wxss */
+.content{
+  padding-top: 20px;
+  font-family: 'Microsoft YaHei';
+   background-color: #f9f9f8; 
+  height: 560px;
+}
+ .start{
+  width: 100%;
+  background-color: #fff;
+} 
+.item{
+  font-size: 15px;
+  margin: 0 10px;
+  border-bottom: 1px solid #ccc;
+  line-height: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.item:last-child{
+  border-bottom: 0;
+}
+.itemTitle{
+  width: 20%;
+  font-weight: bold;
+  align-items: center;  
+}
+.mas{
+  width: 80%;
+  align-items: center;
+  line-height: 20px;
+}
+.btn{
+  width: 100%;
+  background-color: #FFD600;
+
+}

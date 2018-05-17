@@ -1,0 +1,25 @@
+<!--pages/supermarket/supermarket.wxml-->
+<view class='content'>
+  <view class='left'>
+    <scroll-view class='scroll-view_H' scroll-y>
+      <view class="scroll-view-item_H">
+        <view wx:for="{{Navs}}" wx:key='unique' class="{{currentTab==index?'select':'normal'}}" id='{{index}}' bindtap='switchNav'>{{item.name}}</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='right'>
+    <view class='order'>
+      <view>综合排名</view>
+      <view>按价格</view>
+      <view>按销量</view>      
+    </view>
+    <view class='hr'></view>
+    <view class='category'>
+      <swiper current='{{currentTab}}' vertical='true' style='height:500px;' >
+        <swiper-item wx:for="{{Navs}}" wx:key='unique'>
+          <include src="rxb.wxml"/>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>

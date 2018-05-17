@@ -1,0 +1,79 @@
+<!--pages/me/me.wxml-->
+<view class='content'>
+  <view class='bg'>
+    <view class='head' wx:if="{{hasUserInfo}}">
+      <view class='headIcon'>
+        <image src='{{userInfo.avatarUrl}}' style='width:99px;height:99px;'></image>
+      </view>
+      <view class='login'>
+        <view class='uaerName'>{{userInfo.nickName}}</view>
+      </view>
+      <view class='right'>
+        <image src='../../images/icon/right-1.png' style='width:24px;height:24px;'></image>
+      </view>
+    </view>
+    <view class='head' wx:else>
+      <view class='headIcon'>
+        <image src='../../images/icon/hasUserInfo.jpg' style='width:99px;height:99px;'></image>
+      </view>
+      <view class='login'>
+        <view class='uaerName' style='font-size:16px;' bindtap='login'>请登录</view>
+      </view>
+    </view>
+
+  </view>
+  <view class='hr'></view>
+  <view class='item' bindtap='selectNav2' id='0'>
+    <view class='img'>
+      <image src='../../images/icon/order.png' style='width:24px;height:24px;'></image>
+    </view>
+    <view class='name'>全部清单</view>
+    <view class='detail'>
+      <image src='../../images/icon/right.png' style='width:20px;height:20px;'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='item' bindtap='selectNav2' id='3'>
+    <view class='img'>
+      <image src='../../images/icon/transport.png' style='width:24px;height:24px;'></image>
+    </view>
+    <view class='name'>待收货</view>
+    <view class='detail'>
+      <image src='../../images/icon/right.png' style='width:20px;height:20px;'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='item'bindtap='selectNav2' id='4'>
+    <view class='img'>
+      <image src='../../images/icon/finish.png' style='width:24px;height:24px;'></image>
+    </view>
+    <view class='name'>已完成订单</view>
+    <view class='count'></view>
+    <view class='detail'>
+      <image src='../../images/icon/right.png' style='width:20px;height:20px;'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='hr'></view>
+  <view class='item' bindtap='getCoupons'>
+    <view class='img'>
+      <image src='../../images/icon/discount.png' style='width:24px;height:24px;'></image>
+    </view>
+    <view class='name'>优惠券</view>
+    <view class='count'>{{couponsCount}}张</view>
+    <view class='detail'>
+      <image src='../../images/icon/right.png' style='width:20px;height:20px;'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+  <view class='item' bindtap='getAddress'>
+    <view class='img'>
+      <image src='../../images/icon/get.png' style='width:24px;height:24px;'></image>
+    </view>
+    <view class='name'>收货地址</view>
+    <view class='detail'>
+      <image src='../../images/icon/right.png' style='width:20px;height:20px;'></image>
+    </view>
+  </view>
+  <view class='line'></view>
+</view>

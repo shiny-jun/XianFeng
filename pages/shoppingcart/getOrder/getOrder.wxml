@@ -1,0 +1,57 @@
+<!--pages/shoppingcart/order/order.wxml-->
+<view class='address' bindtap='selectAddress'>
+  <view class='name'>{{address.userName}}</view>
+  <view class='mes'>
+    <view class='phone'>{{address.phone}}</view>
+    <view class='area'>
+      <text>{{address.state}}{{address.city}}{{address.area}}{{address.address}}</text>
+      <text>{{address.num}}</text>
+    </view>
+  </view>
+  <view class='right'>
+    <image src='../../../images/icon/right.png' style='width:20px;height:22px;'></image>
+  </view>
+</view>
+<view class='hr'></view>
+<view class='coupon' bindtap='getCoupons'>
+  <view class='coupon_message'>优惠券：{{couponName}}</view>
+  <view class='right'>
+    <image src='../../../images/icon/right.png' style='width:20px;height:22px;'></image>
+  </view>
+</view>
+<view class='hr'></view>
+<view style='background:#fff;'>
+  <view class='totalPrice_item'>
+    <view class='item'>商品合计</view>
+    <view class='price'>￥{{totalPrice}}</view>
+  </view>
+  <view class='line'></view>
+  <view class='totalPrice_item'>
+    <view class='item'>运费</view>
+    <view class='price'>￥{{transportPrice}}</view>
+  </view>
+  <view class='line'></view>
+  <view class='totalPrice_item'>
+    <view class='item'>商品合计</view>
+    <view class='price'>-￥{{couponPrice}}</view>
+  </view>
+</view>
+<view class='hr'></view>
+<view class='goods'>
+  <view class='goods_list' wx:for="{{getOrder}}" wx:key="unique">
+    <view class='goods_list_img'>
+      <image src='{{item.cover_image}}' style='width:80px; height:80px;'></image>
+    </view>
+    <view class='goods_list_mes'>
+      <view class='goods_list_name'>{{item.title}}</view>
+      <view class='goods_list_price'>￥{{item.price}}</view>
+    </view>
+    <view class='goods_list_count'>
+      <text>×{{item.count}}</text>
+    </view>
+  </view>
+</view>
+<view class='finish'>
+  <view class='finish_total'>应付￥{{finishPrice}}</view>
+  <view class='finish_opr' bindtap='sumbitOrder'>提交订单</view>
+</view>

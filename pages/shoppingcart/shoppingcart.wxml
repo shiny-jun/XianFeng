@@ -1,0 +1,73 @@
+<!--pages/shoppingcart/shoppingcart.wxml-->
+<view class='content'>
+  <view class='hr'></view>
+  <view class='address' bindtap='selectAddress'>
+    <view class='name'>{{address.userName}}</view>
+    <view class='mes'>
+      <view class='phone'>{{address.phone}}</view>
+      <view class='area'>
+        <text>{{address.state}}{{address.city}}{{address.area}}{{address.address}}</text>
+        <text>{{address.num}}</text>
+      </view>
+    </view>
+    <view class='right2'>
+      <image src='../../images/icon/right.png' style='width:20px;height:22px;'></image>
+    </view>
+  </view>
+  <view class='hr'></view>
+  <view class='info'>
+    <view class='sscs'>
+      <image src='../../images/cart/sscs.jpg' style='width:180px;height:47px;'></image>
+    </view>
+    <view class='line'></view>
+    <view class='receive'>
+      <view>
+        <view class='time'>
+          <view class='left'>收货时间</view>
+          <view class='right'>一小时送达可预订</view>
+        </view>
+        <view class='freight'>
+          <image src='../../images/cart/shsj.jpg' style='width:24px;height:24px;'></image>￥0起送，22：00前满￥30免运费，22：00后满￥69免运费
+        </view>
+      </view>
+      <view class='detail2'>></view>
+    </view>
+    <view class='line'></view>
+    <view class='items'>
+      <form bindsubmit="formSubmit">
+        <checkbox-group name="checkboxGoods" bindchange="checkboxChange">
+          <block wx:for="{{orders}}" wx:key="unique">
+            <view class='item'>
+              <view class='icon'>
+                <checkbox value='{{item.id}}' checked="{{selected}}"></checkbox>
+              </view>
+              <view class='pic'>
+                <image src='{{item.cover_image}}' style='width:87px;height:87px;'></image>
+              </view>
+              <view class='order'>
+                <view class='title'>{{item.title}}</view>
+                <view class='priceInfo'>
+                  <view class='price'>￥{{item.price}}</view>
+                  <view class='minus' id='{{item.id}}' bindtap='minusGoods'>-</view>
+                  <view class='count'>{{item.count}}</view>
+                  <view class='add' id='{{item.id}}' bindtap='addGoods'>+</view>
+                </view>
+              </view>
+            </view>
+            <view class='line'></view>
+          </block>
+        </checkbox-group>
+        <checkbox-group bindchange="checkAll">
+          <view class='all'>
+            <view class='allcheckbox'>
+              <checkbox checked='{{selectedAll}}'></checkbox>
+            </view>
+            <view class='selectAll'>全选</view>
+            <view class='total'>共￥{{totalPrice}}元</view>
+            <button class='opr' formType="submit">结算</button>
+          </view>
+        </checkbox-group>
+      </form>
+    </view>
+  </view>
+</view>

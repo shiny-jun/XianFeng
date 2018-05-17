@@ -1,0 +1,16 @@
+<!--pages/supermarket/tttj.wxml-->
+<scroll-view class='scroll-view_H' style='height: 500px;' scroll-y>
+<view wx:for="{{items2}}" wx:key="unique">
+  <view class='item'>
+    <view class='icon'><image src='{{item.img}}' style='width:70px;height:87px;'></image></view>
+    <view class='info'>
+      <view class='name'>{{item.name}}</view>
+      <view class='priceInfo'>
+        <view class='price'>￥{{item.price}}</view>
+        <view class='count'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class='hr'></view>
+</view>
+</scroll-view>

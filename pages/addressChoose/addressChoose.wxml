@@ -1,0 +1,25 @@
+<!--pages/addressChoose/addressChoose.wxml-->
+<view class='content'>
+  <view class='hr'></view>
+  <block wx:for="{{addresses}}" wx:key="unique">
+    <view class='item'>
+      <view class="info {{flag==index?'select':'normal'}}" id='{{index}}' bindtap='switchNav'>
+        <view class='name'>
+          <text>{{item.userName}}{{item.sex}}</text>
+          <text>{{item.phone}}</text>
+        </view>
+        <view class='address'>
+          <text>{{item.state}}{{item.city}}{{item.area}}{{item.address}}</text>
+          <text>{{item.num}}</text>
+        </view>
+      </view>
+      <view class='opr' bindtap='changeAddress' id="{{index}}">
+        <image src='../../images/cart/xg.jpg' style='width:33px;height:33px;'></image>
+      </view>
+    </view>
+    <view class='line'></view>
+  </block>
+  <view class='bg' bindtap='newAddress'>
+    <view class='newAddress'>+新增地址</view>
+  </view>
+</view>
